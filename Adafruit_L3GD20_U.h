@@ -17,9 +17,14 @@
 /*=========================================================================
     I2C ADDRESS/BITS AND SETTINGS
     -----------------------------------------------------------------------*/
-#define L3GD20_ADDRESS (0x6B)     //!< L3gD20 I2C address; 1101011 in binary
+#ifndef L3GD20_ADDRESS
+#define L3GD20_ADDRESS (0x6B)         //!< L3gD20 I2C address; 1101011 in binary
+#endif
+
 #define L3GD20_POLL_TIMEOUT (100) //!< Maximum number of read attempts
-#define L3GD20_ID (0xD4)          //!< L3GD20 ID
+#ifndef L3GD20_ID
+#define L3GD20_ID (0xD4)
+#endif
 #define L3GD20H_ID (0xD7)         //!< L3GD20H ID
 // Sesitivity values from the mechanical characteristics in the datasheet.
 #define GYRO_SENSITIVITY_250DPS (0.00875F) //!< Sensitivity at 250 dps
